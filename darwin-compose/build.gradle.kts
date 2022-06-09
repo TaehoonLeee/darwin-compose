@@ -10,7 +10,7 @@ kotlin {
 	iosX64("uikitX64") {
 		binaries {
 			executable {
-				entryPoint = "main"
+				entryPoint = "com.example.drawincompose.app.main"
 				freeCompilerArgs += listOf(
 					"-linker-option", "-framework", "-linker-option", "Metal",
 					"-linker-option", "-framework", "-linker-option", "CoreText",
@@ -25,8 +25,6 @@ kotlin {
 			dependencies {
 				implementation(project(mapOf("path" to ":shared")))
 				implementation(project(mapOf("path" to ":ui-compose")))
-				implementation(compose.ui)
-				implementation(compose.runtime)
 				implementation(compose.material)
 				implementation(compose.foundation)
 			}
@@ -42,7 +40,7 @@ compose.experimental {
 		deployConfigurations {
 			simulator("IPhone12Pro") {
 				//Usage: ./gradlew iosDeployIPhone12ProDebug
-				device = IOSDevices.IPHONE_12_PRO
+				device = IOSDevices.IPHONE_13_PRO
 			}
 		}
 	}
