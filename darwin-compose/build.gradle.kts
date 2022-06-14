@@ -10,7 +10,7 @@ kotlin {
 	iosX64("uikitX64") {
 		binaries {
 			executable {
-				entryPoint = "com.example.drawincompose.app.main"
+				entryPoint = "com.example.darwincompose.app.main"
 				freeCompilerArgs += listOf(
 					"-linker-option", "-framework", "-linker-option", "Metal",
 					"-linker-option", "-framework", "-linker-option", "CoreText",
